@@ -81,7 +81,7 @@ const TweaksSystemMenuSettings = GObject.registerClass(class TweaksSystemMenuSet
 
     setup() {
 	let gnome_shell_version = imports.misc.config.PACKAGE_VERSION;
-	let gnome_shell_major = /^([0-9]+)\.([0-9]+)(\.([0-9]+)(\..*)?)?$/.exec(gnome_shell_version)[1];
+	let gnome_shell_major = gnome_shell_version.split(".")[0];
 
 	this.margin_top = 12;
 	this.margin_bottom = this.margin_top;
